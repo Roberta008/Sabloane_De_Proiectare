@@ -1,9 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings({"FieldCanBeLocal", "unused"})
 public class Chapter {
-    private String numeleCapitolului;
-    private List<SubChapter> listaSubcapitole;
+    private final String numeleCapitolului;
+    private final List<SubChapter> listaSubcapitole;
 
     public Chapter(String numeleCapitolului) {
         this.numeleCapitolului = numeleCapitolului;
