@@ -5,30 +5,35 @@ import java.util.List;
 public class Book {
     private final String titluCartii;
     private final List<String> elementeleListei;
-    private Author numeleAutorului;
-    private final List<Chapter> listaCapitole;
+    private final List<Element> listaElemente;
+    private final List<Author> listaAutori;
 
     public Book(String titlulCartii) {
         this.titluCartii = titlulCartii;
         this.elementeleListei = new ArrayList<>();
-        this.listaCapitole = new ArrayList<>();
+        this.listaElemente = new ArrayList<>();
+        this.listaAutori = new ArrayList<>();
     }
 
 
     public void addAuthor(Author autorul) {
-        numeleAutorului = autorul;
+        listaAutori.add(autorul);
     }
 
-    public int createChapter(String numeleCapitolului) {
-
-        Chapter capitolCurent = new Chapter(numeleCapitolului);
-        listaCapitole.add(capitolCurent);
-        return listaCapitole.indexOf(capitolCurent);
-
+    public void addContent(Element element) {
+        listaElemente.add(element);
     }
 
-    public Chapter getChapter(int indexulCapitolului) {
-        return listaCapitole.get(indexulCapitolului);
+    public void print() {
+        System.out.println("Book: " + titluCartii + "\n");
+        System.out.println("Authors: ");
+        for (Author author : listaAutori) {
+            author.print();
+        }
+        System.out.println();
+        for (Element element : listaElemente) {
+            element.print();
+        }
     }
 }
 
