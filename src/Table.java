@@ -31,6 +31,11 @@ public class Table implements Element {
     public Element get(int indexulElementului) {
         return listaTabele.get(indexulElementului);
     }
+
+    @Override
+    public String getNumeleparagrafului() {
+        return null;
+    }
 }
 
 

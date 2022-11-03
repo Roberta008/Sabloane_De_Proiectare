@@ -36,4 +36,9 @@ public class Image implements Element {
     public Element get(int indexulElementului) {
         return listaImagini.get(indexulElementului);
     }
+
+    @Override
+    public String getNumeleparagrafului() {
+        return null;
+    }
 }

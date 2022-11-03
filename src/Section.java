@@ -33,4 +33,9 @@ public class Section implements Element {
     public Element get(int indexulElementului) {
         return listaSectiuni.get(indexulElementului);
     }
+
+    @Override
+    public String getNumeleparagrafului() {
+        return null;
+    }
 }

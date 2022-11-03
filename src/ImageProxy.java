@@ -33,4 +33,9 @@ public class ImageProxy implements Element, Picture{
     public Element get(int indexulElementului) {
         return null;
     }
+
+    @Override
+    public String getNumeleparagrafului() {
+        return null;
+    }
 }

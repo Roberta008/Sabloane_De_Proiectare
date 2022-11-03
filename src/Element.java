@@ -7,4 +7,6 @@ public interface Element {
     void remove(Element element);
 
     Element get(int indexulElementului);
+
+    String getNumeleparagrafului();
 }
