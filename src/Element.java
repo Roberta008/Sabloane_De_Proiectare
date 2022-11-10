@@ -9,4 +9,6 @@ public interface Element {
     Element get(int indexulElementului);
 
     String getNumeleparagrafului();
+
+    void accept(Visitor v);
 }

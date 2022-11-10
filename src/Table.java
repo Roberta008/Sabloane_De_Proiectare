@@ -36,6 +36,11 @@ public class Table implements Element {
     public String getNumeleparagrafului() {
         return null;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitTable(this);
+    }
 }
 
 

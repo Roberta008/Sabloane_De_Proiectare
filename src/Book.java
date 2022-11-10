@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings({"FieldCanBeLocal", "unused"})
-public class Book {
+public class Book{
     private final String titluCartii;
     private final List<String> elementeleListei;
     private final List<Element> listaElemente;
@@ -25,7 +25,7 @@ public class Book {
     }
 
     public void print() {
-        System.out.println("Book: " + titluCartii + "\n");
+        System.out.println("models.Book: " + titluCartii + "\n");
         System.out.println("Authors: ");
         for (Author author : listaAutori) {
             author.print();

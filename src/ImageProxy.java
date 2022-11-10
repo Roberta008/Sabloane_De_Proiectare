@@ -38,4 +38,9 @@ public class ImageProxy implements Element, Picture{
     public String getNumeleparagrafului() {
         return null;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitImageProxy(this);
+    }
 }

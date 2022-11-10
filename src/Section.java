@@ -38,4 +38,11 @@ public class Section implements Element {
     public String getNumeleparagrafului() {
         return null;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
+        for(Element elementCurent : listaSectiuni)
+            elementCurent.accept(v);
+    }
 }

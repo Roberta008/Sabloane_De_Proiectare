@@ -44,4 +44,9 @@ public class Paragraph implements Element {
     public String getNumeleparagrafului() {
         return this.numeleParagrafului;
     }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitParagraph(this);
+    }
 }

@@ -1,4 +1,3 @@
-
 public class AlignCenter implements AlignStrategy {
     public AlignCenter() {
     };
