@@ -14,9 +14,10 @@ public abstract class Produs implements Element {
         return numeProdus;
     }
 
-    public double getPretProdus() {
-        return pretProdus;
-    }
+    @Override
+    public abstract void afisarePret();
+    @Override
+    public abstract double getPretProdus();
 
     public void setPretProdus(double pretProdus) {
         this.pretProdus = pretProdus;

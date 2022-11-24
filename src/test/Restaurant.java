@@ -13,6 +13,16 @@ public class Restaurant implements Element {
         listaElemente = new ArrayList<>();
     }
 
+    @Override
+    public void afisarePret() {
+        System.out.println("Urmatoarele comenzi provin din restaurantul " + numeRestaurant + "!");
+    }
+
+    @Override
+    public double getPretProdus() {
+        return 0.0;
+    }
+
     public String getNumeRestaurant() {
         return numeRestaurant;
     }
@@ -20,5 +30,11 @@ public class Restaurant implements Element {
     @Override
     public void add(Element obiectElement) {
         listaElemente.add(obiectElement);
+    }
+
+    @Override
+    public void accept(Visitor obiectVisitor) {
+        obiectVisitor.visit(this);
+        listaElemente.forEach(elementCurent -> elementCurent.accept(obiectVisitor));
     }
 }

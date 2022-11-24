@@ -12,6 +12,16 @@ public class Subcomanda implements Element {
         this.listaElemente = new ArrayList<>();
     }
 
+    @Override
+    public void afisarePret() {
+        System.out.println("Subcomanda " + idSubComanda + " in valoare de " + getPretProdus() + " este formata din:");
+    }
+
+    @Override
+    public double getPretProdus() {
+        return listaElemente.stream().mapToDouble(Element::getPretProdus).sum();
+    }
+
     public String getIdSubComanda() {
         return idSubComanda;
     }
@@ -23,5 +33,11 @@ public class Subcomanda implements Element {
     @Override
     public void add(Element obiectElement) {
         listaElemente.add(obiectElement);
+    }
+
+    @Override
+    public void accept(Visitor obiectVisitor) {
+        obiectVisitor.visit(this);
+        listaElemente.forEach(elementCurent -> elementCurent.accept(obiectVisitor));
     }
 }
