@@ -1,21 +1,21 @@
-public class TableOfContents implements Element{
+public class TableOfContents implements ElementMain {
     @Override
     public void print() {
 
     }
 
     @Override
-    public void add(Element element) {
+    public void add(ElementMain elementMain) {
 
     }
 
     @Override
-    public void remove(Element element) {
+    public void remove(ElementMain elementMain) {
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return null;
     }
 

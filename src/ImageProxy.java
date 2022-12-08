@@ -1,4 +1,4 @@
-public class ImageProxy implements Element, Picture{
+public class ImageProxy implements ElementMain, Picture{
     private final String imagineaProxy;
     private int dimensiune;
     private Image imagine;
@@ -20,17 +20,17 @@ public class ImageProxy implements Element, Picture{
     }
 
     @Override
-    public void add(Element element) {
+    public void add(ElementMain elementMain) {
 
     }
 
     @Override
-    public void remove(Element element) {
+    public void remove(ElementMain elementMain) {
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return null;
     }
 

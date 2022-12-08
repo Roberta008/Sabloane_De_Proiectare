@@ -1,12 +1,12 @@
 @SuppressWarnings("unused")
-public interface Element {
+public interface ElementMain {
     void print();
 
-    void add(Element element);
+    void add(ElementMain elementMain);
 
-    void remove(Element element);
+    void remove(ElementMain elementMain);
 
-    Element get(int indexulElementului);
+    ElementMain get(int indexulElementului);
 
     String getNumeleparagrafului();
 

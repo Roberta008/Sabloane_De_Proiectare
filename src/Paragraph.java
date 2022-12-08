@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Paragraph implements Element {
+public class Paragraph implements ElementMain {
     private final String numeleParagrafului;
-    private final List<Element> listaParagrafe;
+    private final List<ElementMain> listaParagrafe;
     private AlignStrategy a=null;
 
     public Paragraph(String numeleParagrafului) {
@@ -25,18 +25,18 @@ public class Paragraph implements Element {
     }
 
     @Override
-    public void add(Element element) {
-        listaParagrafe.add(element);
+    public void add(ElementMain elementMain) {
+        listaParagrafe.add(elementMain);
     }
 
     @Override
-    public void remove(Element element) {
-        listaParagrafe.remove(element);
+    public void remove(ElementMain elementMain) {
+        listaParagrafe.remove(elementMain);
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return listaParagrafe.get(indexulElementului);
     }
 

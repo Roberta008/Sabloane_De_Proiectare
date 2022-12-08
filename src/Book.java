@@ -5,7 +5,7 @@ import java.util.List;
 public class Book{
     private final String titluCartii;
     private final List<String> elementeleListei;
-    private final List<Element> listaElemente;
+    private final List<ElementMain> listaElemente;
     private final List<Author> listaAutori;
 
     public Book(String titlulCartii) {
@@ -20,8 +20,8 @@ public class Book{
         listaAutori.add(autorul);
     }
 
-    public void addContent(Element element) {
-        listaElemente.add(element);
+    public void addContent(ElementMain elementMain) {
+        listaElemente.add(elementMain);
     }
 
     public void print() {
@@ -31,8 +31,8 @@ public class Book{
             author.print();
         }
         System.out.println();
-        for (Element element : listaElemente) {
-            element.print();
+        for (ElementMain elementMain : listaElemente) {
+            elementMain.print();
         }
     }
 }

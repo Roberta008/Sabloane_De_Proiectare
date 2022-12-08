@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Section implements Element {
+public class Section implements ElementMain {
     private final String numeleSectiunii;
-    private final List<Element> listaSectiuni;
+    private final List<ElementMain> listaSectiuni;
     public Section(String numeleSectiunii) {
         this.numeleSectiunii=numeleSectiunii;
         this.listaSectiuni=new ArrayList<>();
@@ -12,25 +12,25 @@ public class Section implements Element {
     @Override
     public void print() {
         System.out.println(numeleSectiunii);
-        for (Element element : listaSectiuni) {
-            element.print();
+        for (ElementMain elementMain : listaSectiuni) {
+            elementMain.print();
         }
 
     }
 
     @Override
-    public void add(Element element) {
-        listaSectiuni.add(element);
+    public void add(ElementMain elementMain) {
+        listaSectiuni.add(elementMain);
     }
 
     @Override
-    public void remove(Element element) {
-        listaSectiuni.remove(element);
+    public void remove(ElementMain elementMain) {
+        listaSectiuni.remove(elementMain);
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return listaSectiuni.get(indexulElementului);
     }
 
@@ -42,7 +42,7 @@ public class Section implements Element {
     @Override
     public void accept(Visitor v) {
         v.visitSection(this);
-        for(Element elementCurent : listaSectiuni)
-            elementCurent.accept(v);
+        for(ElementMain elementMainCurent : listaSectiuni)
+            elementMainCurent.accept(v);
     }
 }

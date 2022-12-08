@@ -2,9 +2,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public class Table implements Element {
+public class Table implements ElementMain {
     private final String numeleTabelei;
-    private final List<Element> listaTabele;
+    private final List<ElementMain> listaTabele;
 
     public Table(String numeleTabelei) {
         this.numeleTabelei = numeleTabelei;
@@ -17,18 +17,18 @@ public class Table implements Element {
     }
 
     @Override
-    public void add(Element element) {
-        listaTabele.add(element);
+    public void add(ElementMain elementMain) {
+        listaTabele.add(elementMain);
     }
 
     @Override
-    public void remove(Element element) {
-        listaTabele.remove(element);
+    public void remove(ElementMain elementMain) {
+        listaTabele.remove(elementMain);
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return listaTabele.get(indexulElementului);
     }
 

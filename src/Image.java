@@ -3,9 +3,9 @@ import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 
-public class Image implements Element {
+public class Image implements ElementMain {
     private final String imagineaCapitolului;
-    private final List<Element> listaImagini;
+    private final List<ElementMain> listaImagini;
 
     public Image(String name) {
         this.listaImagini=new ArrayList<>();
@@ -22,18 +22,18 @@ public class Image implements Element {
     }
 
     @Override
-    public void add(Element element) {
-        listaImagini.add(element);
+    public void add(ElementMain elementMain) {
+        listaImagini.add(elementMain);
     }
 
     @Override
-    public void remove(Element element) {
-        listaImagini.remove(element);
+    public void remove(ElementMain elementMain) {
+        listaImagini.remove(elementMain);
 
     }
 
     @Override
-    public Element get(int indexulElementului) {
+    public ElementMain get(int indexulElementului) {
         return listaImagini.get(indexulElementului);
     }
 

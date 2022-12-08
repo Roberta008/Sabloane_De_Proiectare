@@ -14,8 +14,16 @@ public class Main {
         cap1.add(new Image("ImageTwo"));
         cap1.add(new Paragraph("Some text"));
         cap1.add(new Table("Table 1"));
-        BookStatistics stats = new BookStatistics();
-        cap1.accept(stats);
-        stats.printStatistics();
+        Book b1=new Book("Cartea 1");
+        b1.addContent(p1);
+        b1.addContent(p2);
+        DocumentManager dm=DocumentManager.getInstance();
+        dm.setBook(b1);
+        Printing();
+    }
+
+    private static void Printing() {
+        DocumentManager.getInstance().getBook().print();
     }
 }
+
