@@ -1,3 +1,7 @@
+package services;
+
+import models.Book;
+
 public class DocumentManager {
     private static DocumentManager d=null;
     private Book b;

@@ -1,3 +1,7 @@
+package services;
+
+import models.Paragraph;
+
 public class AlignLeft implements AlignStrategy {
     public AlignLeft() {
 

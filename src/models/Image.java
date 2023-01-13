@@ -1,3 +1,7 @@
+package models;
+
+import services.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
@@ -18,7 +22,7 @@ public class Image implements ElementMain {
     }
     @Override
     public void print() {
-        System.out.println("Image with name: " + imagineaCapitolului);
+        System.out.println("models.Image with name: " + imagineaCapitolului);
     }
 
     @Override

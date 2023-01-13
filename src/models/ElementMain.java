@@ -1,3 +1,7 @@
+package models;
+
+import services.Visitor;
+
 @SuppressWarnings("unused")
 public interface ElementMain {
     void print();

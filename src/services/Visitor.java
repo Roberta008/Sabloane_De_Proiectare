@@ -1,3 +1,7 @@
+package services;
+
+import models.*;
+
 public interface Visitor {
     void visitBook(Book a);
     void visitSection(Section a);

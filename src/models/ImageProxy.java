@@ -1,3 +1,7 @@
+package models;
+
+import services.Visitor;
+
 public class ImageProxy implements ElementMain, Picture{
     private final String imagineaProxy;
     private int dimensiune;

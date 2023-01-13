@@ -1,3 +1,7 @@
+package models;
+
+import services.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 

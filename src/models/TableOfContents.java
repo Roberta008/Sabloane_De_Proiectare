@@ -1,3 +1,7 @@
+package models;
+
+import services.Visitor;
+
 public class TableOfContents implements ElementMain {
     @Override
     public void print() {

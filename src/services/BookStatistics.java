@@ -1,3 +1,7 @@
+package services;
+
+import models.*;
+
 public class BookStatistics implements Visitor {
     private int nrimagini;
     private int nrparagrafe;
@@ -38,7 +42,7 @@ public class BookStatistics implements Visitor {
     }
     public void printStatistics()
     {
-        System.out.println("Book Statistics:");
+        System.out.println("models.Book Statistics:");
         System.out.println("* * * Number of images: "+this.nrimagini);
         System.out.println("* * * Number of tables: "+this.nrtabela);
         System.out.println("* * * Number of paragraphs: "+this.nrparagrafe);

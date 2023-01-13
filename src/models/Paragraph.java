@@ -1,3 +1,8 @@
+package models;
+
+import services.AlignStrategy;
+import services.Visitor;
+
 import java.util.ArrayList;
 import java.util.List;
 
